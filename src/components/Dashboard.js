@@ -8,6 +8,7 @@ const MainDashboard = () => {
   const { currentUser } = useContext(AuthContext);
   const [admin, setAdmin] = useState(false);
   const [name,setName] = useState('');
+  const [privacy, setPrivacy] = useState(false);
 
   if (!currentUser) {
     return <Navigate to="/" />;
@@ -18,6 +19,7 @@ const MainDashboard = () => {
       if (doc.exists) {
           setAdmin(doc.data().isAdmin);
           setName(doc.data().name);
+          setPrivacy(doc.data().privacy);
       } else {
           // doc.data() will be undefined in this case
           console.log("No such document!");

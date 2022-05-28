@@ -44,7 +44,7 @@ const Login = () => {
     };
     const { currentUser } = useContext(AuthContext);
     if (currentUser) {
-        return <Navigate to="/dashboard" />;
+        return <Navigate to="/privacy" />;
     }
     return (
         <MDBContainer className="mt-4 ">

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import MainDashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Privacy from "./components/Privacy";
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
       <AuthProvider>
         <Router>
           <Routes>
-            <Route exact path="/" element={<Home/>} />
-            <Route exact path="/login" element={<Login/>} />
-            <Route exact path="/signup" element={<Signup/>}  />
-            <Route exact path="/dashboard" element={<MainDashboard/>} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/signup" element={<Signup/>}  />
+            <Route path="/dashboard" element={<MainDashboard/>} />
+            <Route path="/privacy" element={<Privacy/>}/>
           </Routes>
         </Router>
       </AuthProvider>
